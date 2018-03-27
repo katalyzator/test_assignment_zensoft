@@ -16,9 +16,9 @@ class PullRequestHelper(object):
         res = self._do_request(url=self.REPO_PULL_REQUESTS_URL % (username, repo), auth_params=auth_params)
 
         if res.status_code == 404:
-            raise Exception('Repository %s not found.' % repo)
+            raise Exception('Repository %s not found. Please try again...' % repo)
         elif res.status_code == 403 or res.status_code == 401:
-            raise Exception('Failed to authenticate')
+            raise Exception('Failed to authenticate...')
         elif res.status_code == 200:
             prs = json.loads(res.content)
 
@@ -30,18 +30,18 @@ class PullRequestHelper(object):
         res = self._do_request(url=self.USER_REPOS_URL % username, auth_params=auth_params)
 
         if res.status_code == 403 or res.status_code == 401:
-            raise Exception('Failed to authenticate')
+            raise Exception('Failed to authenticate...')
         elif res.status_code == 404:
             raise Exception('Not found')
         elif res.status_code == 200:
             repos = json.loads(res.content)
             return [r['name'] for r in repos]
         else:
-            raise Exception('Unknown error.')
+            raise Exception('Unknown error...')
 
     def run(self):
         if len(argv) < 3:
-            raise Exception('Please provide username and password in command line')
+            raise Exception('Please provide username and password in command line...')
 
         username = argv[1]
         password = argv[2]
@@ -59,13 +59,13 @@ class PullRequestHelper(object):
                 pull_requests.append(pr)
 
                 if len(pull_requests) > 10:
-                    raise Exception('too many pull requests, try to filter by repo')
+                    raise Exception('Too many pull requests, try to filter by repo...')
 
             for i in pull_requests:
                 webbrowser.open_new_tab(i)
 
         if len(pull_requests) == 0:
-            raise Exception('There are no pull requests in your repositories')
+            raise Exception('There are no pull requests in your repositories...')
 
 
 def main():
