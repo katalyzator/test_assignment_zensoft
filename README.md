@@ -8,7 +8,7 @@
 
 
 ```sh
-$ cd zensoft
+$ cd test_assignment_zensoft
 $ python ./api {github_username} {password_of_username}
 ```
 
