@@ -6,8 +6,6 @@
 
 ### Basic Usage
 
-### Installation
-
 
 ```sh
 $ cd zensoft
@@ -22,7 +20,7 @@ $ python ./api {github_username} {password_of_username} {repository_name_1} ... 
 
 ### Usage Documentation
 
-Dillinger is currently extended with the following plugins. Instructions on how to use them in your own application are linked below.
+
 
 | Name | Link |
 | ------ | ------ |
