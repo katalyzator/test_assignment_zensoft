@@ -7,7 +7,7 @@ import json
 
 class PullRequestHelper(object):
     USER_REPOS_URL = 'https://api.github.com/users/%s/repos'
-    REPO_PULL_REQUESTS_URL = 'https://api.github.com/repos/%s/%s/pulls?state=closed'
+    REPO_PULL_REQUESTS_URL = 'https://api.github.com/repos/%s/%s/pulls?state=open'
 
     def _do_request(self, url, auth_params):
         return requests.get(url, auth=auth_params)
