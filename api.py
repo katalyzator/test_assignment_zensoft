@@ -61,8 +61,8 @@ class PullRequestHelper(object):
                 if len(pull_requests) > 10:
                     raise Exception('Too many pull requests, try to filter by repo...')
 
-            for i in pull_requests:
-                webbrowser.open_new_tab(i)
+            for url in pull_requests:
+                webbrowser.open_new_tab(url)
 
         if len(pull_requests) == 0:
             raise Exception('There are no pull requests in your repositories...')
