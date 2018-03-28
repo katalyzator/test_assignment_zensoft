@@ -6,6 +6,9 @@ pr_test = api.PullRequestHelper()
 
 
 class PullRequestHelperTest(unittest.TestCase):
+    # method that return Exception of unknown repo name,
+    # required parameters are username, password must be correct and also
+    # repo you must write incorrect value
     def test_get_pull_request_links(self):
         username = 'katalyzator'
         password = ''
