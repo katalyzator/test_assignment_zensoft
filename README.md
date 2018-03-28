@@ -24,7 +24,7 @@ $ python ./api {github_username} {password_of_username} {repository_name_1} ... 
 
 | Name | Link |
 | ------ | ------ |
-| Github API | [http://api.github.com](https://github.com/joemccann/dillinger/blob/master/KUBERNETES.md)  |
+| Github API | [http://api.github.com](http://api.github.com)  |
 
 
 
